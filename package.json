@@ -15,9 +15,16 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
+    "kit-sw-workbox": "^1.0.2",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
-    "svelte": "^3.44.0"
+    "svelte": "^3.44.0",
+    "workbox-precaching": "^6.4.2",
+    "workbox-window": "^6.4.2"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "leaflet": "^1.7.1"
+  }
 }

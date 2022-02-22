@@ -1,2 +1,26 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import { onMount } from 'svelte';
+
+	import L from 'leaflet';
+
+	let map;
+	let center = [41.4, 72.77];
+	let zoom = 6;
+
+	const createMap = () => {
+		map = L.map('map').setView(center, zoom);
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution:
+				'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+	};
+
+    onMount (() => {
+        createMap()
+    })
+</script>
+
+
+<div style="height: 200px" class="map" id="map">
+	<slot />
+</div>
