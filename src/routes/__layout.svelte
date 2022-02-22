@@ -2,9 +2,8 @@
 	import { onMount } from 'svelte';
 
 	const dev = import.meta.env.DEV;
-	const browser = import.meta.env.SSR;
 	onMount(() => {
-		if (!dev && browser) {
+		if (!dev) {
 			(async () => {
 				if ('serviceWorker' in navigator) {
 					const { Workbox, messageSW } = await import('workbox-window');
