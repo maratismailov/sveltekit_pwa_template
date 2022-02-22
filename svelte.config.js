@@ -1,10 +1,12 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-netlify';
 import sw from 'kit-sw-workbox'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			split: false
+		}),
 		vite: {
 			plugins: [
 			   sw({routes: []})
