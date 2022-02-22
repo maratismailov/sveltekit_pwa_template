@@ -1,8 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 
-	import L from 'leaflet';
-
 	let map;
 	let center = [41.4, 72.77];
 	let zoom = 6;
