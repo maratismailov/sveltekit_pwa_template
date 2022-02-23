@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
 import { VitePWA } from 'vite-plugin-pwa';
 import replace from '@rollup/plugin-replace'
