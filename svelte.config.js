@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import { VitePWA } from 'vite-plugin-pwa';
 import replace from '@rollup/plugin-replace'
@@ -11,9 +11,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter({
-			split: false
-		}),
+		adapter: adapter(),
 		vite: {
 			plugins: [
 				VitePWA(pwaConfiguration),

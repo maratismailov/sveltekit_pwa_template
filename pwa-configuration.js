@@ -69,7 +69,7 @@ const replaceOptions = {
 
 const workboxOrInjectManifestEntry = {
 	// vite and SvelteKit are not aligned: pwa plugin will use /\.[a-f0-9]{8}\./ by default: #164 optimize workbox work
-	dontCacheBustURLsMatching: /-[a-f0-9]{8}\./,
+	// dontCacheBustURLsMatching: /-[a-f0-9]{8}\./,
 	globDirectory: './build/',
 	globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
 	globIgnores: sw ? (claims ? ['**/claims-sw*'] : ['**/prompt-sw*']) : ['**/sw*', '**/workbox-*'],
